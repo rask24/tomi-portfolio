@@ -17,8 +17,8 @@ const config: Config = {
       },
       fontFamily: {
         main: ['Senobi Gothic', 'sans-serif'],
-        body: ['Inter', 'sans-serif'],
-        numeric: ['Futura PT', 'sans-serif'],
+        body: ['var(--font-inter)', 'sans-serif'],
+        numeric: ['var(--font-montserrat)', 'sans-serif'],
       },
     },
   },
