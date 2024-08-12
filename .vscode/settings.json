@@ -1,5 +1,5 @@
 {
-  "[ts][tsx]": {
+  "[typescript][typescriptreact]": {
     "editor.rulers": [100]
   }
 }

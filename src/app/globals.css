@@ -27,3 +27,24 @@ body {
     text-wrap: balance;
   }
 }
+
+@font-face {
+  font-weight: normal;
+  font-family: 'Senobi Gothic';
+  font-style: normal;
+  src: url('/fonts/Senobi-Gothic-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-weight: 500;
+  font-family: 'Senobi Gothic';
+  font-style: normal;
+  src: url('/fonts/Senobi-Gothic-Medium.ttf') format('truetype');
+}
+
+@font-face {
+  font-weight: bold;
+  font-family: 'Senobi Gothic';
+  font-style: normal;
+  src: url('/fonts/Senobi-Gothic-Bold.ttf') format('truetype');
+}
