@@ -8,8 +8,8 @@
     "start": "next start",
     "lint": "eslint './src/**/*.{ts,tsx}'",
     "lint:fix": "eslint --fix './src/**/*.{ts,tsx}'",
-    "format": "prettier --config .prettierrc.yml --write './src/**/*.{ts,tsx,css}'",
-    "format:check": "prettier --config .prettierrc.yml --check './src/**/*.{ts,tsx,css}'",
+    "format": "prettier --config .prettierrc.json --write './src/**/*.{ts,tsx,css}'",
+    "format:check": "prettier --config .prettierrc.json --check './src/**/*.{ts,tsx,css}'",
     "lint:style": "stylelint ./src/**/*.css",
     "lint:style:fix": "stylelint --fix ./src/**/*.css"
   },
