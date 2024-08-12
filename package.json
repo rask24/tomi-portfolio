@@ -6,7 +6,12 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "eslint './src/**/*.{ts,tsx}'",
+    "lint:fix": "eslint --fix './src/**/*.{ts,tsx}'",
+    "format": "prettier --config .prettierrc.yml --write './src/**/*.{ts,tsx,css}'",
+    "format:check": "prettier --config .prettierrc.yml --check './src/**/*.{ts,tsx,css}'",
+    "lint:style": "stylelint ./src/**/*.css",
+    "lint:style:fix": "stylelint --fix ./src/**/*.css"
   },
   "dependencies": {
     "next": "14.2.5",
