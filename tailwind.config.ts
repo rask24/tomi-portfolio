@@ -15,6 +15,11 @@ const config: Config = {
         'accent-red': '#D95103',
         'accent-dark-green': '#354135',
       },
+      fontFamily: {
+        main: ['Senobi Gothic', 'sans-serif'],
+        body: ['Inter', 'sans-serif'],
+        numeric: ['Futura PT', 'sans-serif'],
+      },
     },
   },
   plugins: [],
