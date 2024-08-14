@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 import formatDate from '@/lib/formatDate';
 
 type PortfolioDetailModalProps = {
@@ -41,14 +42,22 @@ function PortfolioDetailModal({ isOpen, onClose, item }: PortfolioDetailModalPro
 
         {item.link && (
           <div className="flex justify-center mb-4">
-            <a
-              href={item.link.url}
-              target={item.link.isExternal ? '_blank' : '_self'}
-              rel={item.link.isExternal ? 'noopener noreferrer' : ''}
-              className="block font-main text-2xl text-base-white bg-accent-orange py-2 px-4 rounded-md w-fit"
-            >
-              {item.link.text}
-            </a>
+            {item.link.isExternal ? (
+              <a
+                href={item.link.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block font-main text-2xl text-base-white bg-accent-orange py-2 px-4 rounded-md w-fit"
+              >
+                {item.link.text}
+              </a>
+            ) : (
+              <Link href={item.link.url}>
+                <span className="block font-main text-2xl text-base-white bg-accent-orange py-2 px-4 rounded-md w-fit cursor-pointer">
+                  {item.link.text}
+                </span>
+              </Link>
+            )}
           </div>
         )}
       </div>
