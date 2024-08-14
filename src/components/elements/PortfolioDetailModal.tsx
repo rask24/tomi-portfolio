@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import formatDate from '@/lib/formatDate';
 
 type PortfolioDetailModalProps = {
   isOpen: boolean;
@@ -15,11 +16,7 @@ type PortfolioDetailModalProps = {
 function PortfolioDetailModal({ isOpen, onClose, item }: PortfolioDetailModalProps) {
   if (!isOpen) return null;
 
-  const formattedDate = item.date.toLocaleDateString('en-US', {
-    year: 'numeric',
-    month: 'long',
-    day: 'numeric',
-  });
+  const formattedDate = formatDate(item.date);
 
   return (
     <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50">

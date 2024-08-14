@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import formatDate from '@/lib/formatDate';
 
 type PortfolioCardProps = {
   image: string;
@@ -8,11 +9,7 @@ type PortfolioCardProps = {
 };
 
 function PortfolioCard({ image, title, description, date }: PortfolioCardProps) {
-  const formattedDate = date.toLocaleDateString('en-US', {
-    year: 'numeric',
-    month: 'short',
-    day: 'numeric',
-  });
+  const formattedDate = formatDate(date);
 
   return (
     <div className="max-w-lg mx-auto my-8 space-y-2">
