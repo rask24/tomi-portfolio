@@ -22,3 +22,11 @@
   font-style: normal;
   src: url('/fonts/Senobi-Gothic-Bold.ttf') format('truetype');
 }
+
+main {
+  margin-top: 64px;
+
+  @media (width >= 768px) {
+    margin-top: 0;
+  }
+}
