@@ -14,6 +14,7 @@
     "lint:style:fix": "stylelint --fix ./src/**/*.css"
   },
   "dependencies": {
+    "date-fns": "^3.6.0",
     "next": "14.2.5",
     "react": "^18",
     "react-dom": "^18"
