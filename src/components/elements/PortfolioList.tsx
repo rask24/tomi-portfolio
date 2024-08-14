@@ -58,23 +58,28 @@ function PortfolioList() {
   return (
     <>
       <div>
-        {portfolioItems.map((item) => (
-          <button
-            key={item.title}
-            onClick={() => handleItemSelect(item)}
-            onKeyDown={(e) => handleKeyDown(e, item)}
-            type="button"
-            aria-label={item.title}
-            className="block w-fit text-left"
-          >
-            <PortfolioCard
-              image={item.image}
-              title={item.title}
-              description={item.description}
-              date={item.date}
-            />
-          </button>
-        ))}
+        {portfolioItems.map((item) => {
+          const onSelect = () => handleItemSelect(item);
+          const onKeyDown = (e: React.KeyboardEvent<HTMLButtonElement>) => handleKeyDown(e, item);
+
+          return (
+            <button
+              key={item.title}
+              onClick={onSelect}
+              onKeyDown={onKeyDown}
+              type="button"
+              aria-label={item.title}
+              className="block w-fit text-left"
+            >
+              <PortfolioCard
+                image={item.image}
+                title={item.title}
+                description={item.description}
+                date={item.date}
+              />
+            </button>
+          );
+        })}
       </div>
       {selectedItem && (
         <PortfolioDetailModal
