@@ -50,7 +50,7 @@ export default function Home() {
   return (
     <main className="container mx-auto">
       <h1 className="font-main py-4 text-2xl">tomi portfolio</h1>
-      <div className="flex flex-col">
+      <div>
         {portfolioItems.map((item) => (
           <button
             key={item.title}
@@ -58,6 +58,7 @@ export default function Home() {
             onKeyDown={(e) => handleKeyDown(e, item)}
             type="button"
             aria-label={item.title}
+            className="block w-fit text-left"
           >
             <PortfolioCard
               image={item.image}
