@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import menuConfig from '@/config/menuConfig';
@@ -7,6 +8,14 @@ type MenuGridProps = {
 };
 
 function MenuGrid({ onClose }: MenuGridProps) {
+  useEffect(() => {
+    document.body.style.overflow = 'hidden';
+
+    return () => {
+      document.body.style.overflow = 'auto';
+    };
+  }, []);
+
   return (
     <div className="fixed inset-0 top-16 bg-base-black z-50 overflow-auto">
       <div className="relative min-h-full">
