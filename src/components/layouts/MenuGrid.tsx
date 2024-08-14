@@ -8,21 +8,28 @@ type MenuGridProps = {
 
 function MenuGrid({ onClose }: MenuGridProps) {
   return (
-    <div className="fixed inset-0 top-16 bg-black bg-opacity-50 z-50">
-      <div className="relative w-full h-full overflow-auto">
+    <div className="fixed inset-0 top-16 bg-base-black z-50 overflow-auto">
+      <div className="relative min-h-full">
         <Image
           src="/images/header.png"
-          fill
+          layout="fill"
+          objectFit="cover"
           alt="menu background"
-          className="object-cover opacity-70"
+          className="opacity-40"
         />
-        <div className="relative z-10 p-4">
-          <div className="grid grid-cols-2 gap-4 mt-16">
-            {menuConfig.map((item) => (
+        <div className="relative z-10">
+          <div className="grid grid-cols-2">
+            {menuConfig.map((item, index) => (
               <Link
                 key={item.path}
                 href={item.path}
-                className="bg-white bg-opacity-80 p-4 rounded-md text-center font-main text-lg hover:bg-opacity-100 transition-all"
+                className={`
+                  relative h-32
+                  flex items-center justify-center
+                  text-base-white text-center font-main text-lg
+                  ${index % 2 === 0 ? 'border-r-4 border-base-white' : ''}
+                  after:content-[""] after:absolute after:bottom-0 after:left-0 after:right-0 after:h-1 after:bg-base-white
+                `}
                 onClick={onClose}
               >
                 {item.label}
