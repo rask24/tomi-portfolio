@@ -5,7 +5,8 @@ export const metadata: Metadata = {
 };
 
 function ContactLayout({ children }: { children: React.ReactNode }) {
-  return children;
+  // eslint-disable-next-line react/jsx-no-useless-fragment
+  return <>{children}</>;
 }
 
 export default ContactLayout;
