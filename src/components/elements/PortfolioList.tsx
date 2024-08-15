@@ -18,7 +18,7 @@ const portfolioItems: PortfolioItem[] = [
     title: 'サンプル1',
     description:
       'キャプションキャプションキャプションキャプションキャプションキャプションキャプションキャプションキャプションキャプションキャプションキャプションキャプションキャプションキャプションキャプションキャプション',
-    date: new Date('2024-2-24'),
+    date: new Date('2024/2/24'),
     link: { text: 'リンクテキスト', url: 'https://example.com', isExternal: true },
   },
   {
@@ -26,14 +26,14 @@ const portfolioItems: PortfolioItem[] = [
     title: 'サンプル2',
     description:
       'キャプションキャプションキャプションキャプションキャプションキャプションキャプションキャプションキャプションキャプションキャプションキャプションキャプションキャプションキャプションキャプションキャプション',
-    date: new Date('2024-2-24'),
+    date: new Date('2024/2/24'),
   },
   {
     image: '/images/sample_icon.png',
     title: 'サンプル3',
     description:
       'キャプションキャプションキャプションキャプションキャプションキャプションキャプションキャプションキャプションキャプションキャプションキャプションキャプションキャプションキャプションキャプションキャプション',
-    date: new Date('2024-2-24'),
+    date: new Date('2024/2/24'),
     link: { text: 'リンク', url: '/', isExternal: false },
   },
 ];
