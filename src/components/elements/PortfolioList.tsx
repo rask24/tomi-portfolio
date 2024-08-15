@@ -1,8 +1,6 @@
 'use client';
 
-import { useState } from 'react';
 import PortfolioCard from '@/components/elements/PortfolioCard';
-import PortfolioDetailModal from '@/components/elements/PortfolioDetailModal';
 
 type PortfolioItem = {
   image: string;
@@ -39,35 +37,20 @@ const portfolioItems: PortfolioItem[] = [
 ];
 
 function PortfolioList() {
-  const [selectedItem, setSelectedItem] = useState<PortfolioItem | null>(null);
-
-  const handleCloseModal = () => {
-    setSelectedItem(null);
-  };
-
   return (
-    <>
-      <div>
-        {portfolioItems.map((item) => {
-          return (
-            <PortfolioCard
-              image={item.image}
-              title={item.title}
-              key={item.title}
-              description={item.description}
-              date={item.date}
-            />
-          );
-        })}
-      </div>
-      {selectedItem && (
-        <PortfolioDetailModal
-          isOpen={!!selectedItem}
-          onClose={handleCloseModal}
-          item={selectedItem}
-        />
-      )}
-    </>
+    <div>
+      {portfolioItems.map((item) => {
+        return (
+          <PortfolioCard
+            image={item.image}
+            title={item.title}
+            key={item.title}
+            description={item.description}
+            date={item.date}
+          />
+        );
+      })}
+    </div>
   );
 }
 
