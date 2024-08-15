@@ -19,6 +19,7 @@ function Header() {
             objectFit="cover"
             alt="header-image"
             priority
+            loading="eager"
           />
           <button
             onClick={toggleMenu}

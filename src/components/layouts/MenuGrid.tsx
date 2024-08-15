@@ -25,6 +25,8 @@ function MenuGrid({ onClose }: MenuGridProps) {
           objectFit="cover"
           alt="menu background"
           className="opacity-40"
+          priority
+          loading="eager"
         />
         <div className="relative z-10">
           <div className="grid grid-cols-2">
