@@ -41,43 +41,22 @@ const portfolioItems: PortfolioItem[] = [
 function PortfolioList() {
   const [selectedItem, setSelectedItem] = useState<PortfolioItem | null>(null);
 
-  const handleItemSelect = (item: PortfolioItem) => {
-    setSelectedItem(item);
-  };
-
   const handleCloseModal = () => {
     setSelectedItem(null);
-  };
-
-  const handleKeyDown = (e: React.KeyboardEvent<HTMLButtonElement>, item: PortfolioItem) => {
-    if (e.key === 'Enter' || e.key === ' ') {
-      handleItemSelect(item);
-    }
   };
 
   return (
     <>
       <div>
         {portfolioItems.map((item) => {
-          const onSelect = () => handleItemSelect(item);
-          const onKeyDown = (e: React.KeyboardEvent<HTMLButtonElement>) => handleKeyDown(e, item);
-
           return (
-            <button
+            <PortfolioCard
+              image={item.image}
+              title={item.title}
               key={item.title}
-              onClick={onSelect}
-              onKeyDown={onKeyDown}
-              type="button"
-              aria-label={item.title}
-              className="block w-fit text-left"
-            >
-              <PortfolioCard
-                image={item.image}
-                title={item.title}
-                description={item.description}
-                date={item.date}
-              />
-            </button>
+              description={item.description}
+              date={item.date}
+            />
           );
         })}
       </div>
