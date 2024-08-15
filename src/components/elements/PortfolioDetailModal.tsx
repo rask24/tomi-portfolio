@@ -9,7 +9,7 @@ type PortfolioDetailModalProps = {
     image: string;
     title: string;
     description: string;
-    date: Date;
+    date: string;
     link?: { text: string; url: string; isExternal: boolean };
   };
 };

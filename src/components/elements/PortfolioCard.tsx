@@ -5,7 +5,7 @@ type PortfolioCardProps = {
   image: string;
   title: string;
   description: string;
-  date: Date;
+  date: string;
 };
 
 function PortfolioCard({ image, title, description, date }: PortfolioCardProps) {
