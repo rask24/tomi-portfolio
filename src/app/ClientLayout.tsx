@@ -2,7 +2,7 @@
 
 import { usePathname } from 'next/navigation';
 import useHeader from '@/hooks/useHeader';
-import MobileHeader from '@/components/layouts/MobileHeader';
+import MobileHomeHeader from '@/components/layouts/MobileHomeHeader';
 import DesktopHomeSidePanel from '@/components/layouts/DesktopHomeSidePanel';
 import DesktopOthersSidePanel from '@/components/layouts/DesktopOthersSidePanel';
 
@@ -16,7 +16,7 @@ export default function ClientLayout({ children }: ClientLayoutProps) {
 
   return (
     <body>
-      {isMobile && <MobileHeader />}
+      {isMobile && <MobileHomeHeader />}
       <main className={isMobile ? 'mt-16' : 'mr-80'}>{children}</main>
       {!isMobile && (pathname === '/' ? <DesktopHomeSidePanel /> : <DesktopOthersSidePanel />)}
     </body>
