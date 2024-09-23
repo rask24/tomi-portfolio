@@ -18,7 +18,7 @@ export default function ClientLayout({ children }: ClientLayoutProps) {
     <body>
       {isMobile && <Header />}
       <main className={isMobile ? 'mt-16' : 'mr-80'}>{children}</main>
-      {!isMobile && <>{pathname === '/' ? <MenuGridSidePanel /> : <MenuSidebar />}</>}
+      {!isMobile && (pathname === '/' ? <MenuGridSidePanel /> : <MenuSidebar />)}
     </body>
   );
 }
