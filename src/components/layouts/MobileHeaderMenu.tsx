@@ -7,7 +7,7 @@ type MenuGridProps = {
   onClose: () => void;
 };
 
-function MenuGrid({ onClose }: MenuGridProps) {
+function MobileHeaderMenu({ onClose }: MenuGridProps) {
   useEffect(() => {
     document.body.style.overflow = 'hidden';
 
@@ -53,4 +53,4 @@ function MenuGrid({ onClose }: MenuGridProps) {
   );
 }
 
-export default MenuGrid;
+export default MobileHeaderMenu;
