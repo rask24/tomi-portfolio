@@ -4,7 +4,7 @@ import { usePathname } from 'next/navigation';
 import useHeader from '@/hooks/useHeader';
 import MobileHeader from '@/components/layouts/MobileHeader';
 import DesktopHomeSidePanel from '@/components/layouts/DesktopHomeSidePanel';
-import MenuSidebar from '@/components/layouts/MenuSidebar';
+import DesktopOthersSidePanel from '@/components/layouts/DesktopOthersSidePanel';
 
 type ClientLayoutProps = {
   children: React.ReactNode;
@@ -18,7 +18,7 @@ export default function ClientLayout({ children }: ClientLayoutProps) {
     <body>
       {isMobile && <MobileHeader />}
       <main className={isMobile ? 'mt-16' : 'mr-80'}>{children}</main>
-      {!isMobile && (pathname === '/' ? <DesktopHomeSidePanel /> : <MenuSidebar />)}
+      {!isMobile && (pathname === '/' ? <DesktopHomeSidePanel /> : <DesktopOthersSidePanel />)}
     </body>
   );
 }
