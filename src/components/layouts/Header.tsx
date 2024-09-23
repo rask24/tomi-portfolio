@@ -2,16 +2,20 @@
 
 import { useState } from 'react';
 import Image from 'next/image';
+import useHeader from '@/hooks/useHeader';
 import MenuGrid from './MenuGrid';
 
 function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const { isMobile } = useHeader();
 
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
 
+  if (!isMobile) return null;
+
   return (
     <>
-      <header className="fixed top-0 visible md:invisible w-full h-16 z-40">
+      <header className="fixed top-0 w-full h-16 z-40">
         <div className="relative w-full h-full">
           <Image
             src="/images/header.png"
