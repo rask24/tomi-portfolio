@@ -41,7 +41,7 @@ function DesktopOthersSidePanel() {
             h-16 px-4
             flex justify-center items-center
             font-numeric font-semibold
-            bg-accent-orange text-accent-dark-purple
+            bg-accent-dark-purple text-accent-orange
           "
         >
           UPDATES
@@ -51,7 +51,7 @@ function DesktopOthersSidePanel() {
             h-16 px-4
             flex justify-center items-center
             font-numeric font-semibold
-            bg-accent-dark-purple text-accent-orange
+            bg-accent-orange text-accent-dark-purple
           "
         >
           MENU
