@@ -3,6 +3,7 @@
 import { usePathname } from 'next/navigation';
 import useHeader from '@/hooks/useHeader';
 import MobileHomeHeader from '@/components/layouts/MobileHomeHeader';
+import MobileOthersHeader from '@/components/layouts/MobileOthersHeader';
 import DesktopHomeSidePanel from '@/components/layouts/DesktopHomeSidePanel';
 import DesktopOthersSidePanel from '@/components/layouts/DesktopOthersSidePanel';
 
@@ -14,11 +15,13 @@ export default function ClientLayout({ children }: ClientLayoutProps) {
   const { isMobile } = useHeader();
   const pathname = usePathname();
 
+  const isHomePage = pathname === '/';
+
   return (
     <body>
-      {isMobile && <MobileHomeHeader />}
+      {isMobile && (isHomePage ? <MobileHomeHeader /> : <MobileOthersHeader />)}
       <main className={isMobile ? 'mt-16' : 'mr-80'}>{children}</main>
-      {!isMobile && (pathname === '/' ? <DesktopHomeSidePanel /> : <DesktopOthersSidePanel />)}
+      {!isMobile && (isHomePage ? <DesktopHomeSidePanel /> : <DesktopOthersSidePanel />)}
     </body>
   );
 }
