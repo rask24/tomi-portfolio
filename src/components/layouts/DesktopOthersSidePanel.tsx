@@ -2,7 +2,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import menuConfig from '@/config/menuConfig';
 
-function MenuSidebar() {
+function DesktopOthersSidePanel() {
   return (
     <div className="fixed top-0 right-0 w-80 h-screen bg-base-black z-40 flex flex-col">
       <div className="absolute inset-0">
@@ -41,7 +41,7 @@ function MenuSidebar() {
             h-16 px-4
             flex justify-center items-center
             font-numeric font-semibold
-            bg-accent-orange text-accent-dark-purple
+            bg-accent-dark-purple text-accent-orange
           "
         >
           UPDATES
@@ -51,7 +51,7 @@ function MenuSidebar() {
             h-16 px-4
             flex justify-center items-center
             font-numeric font-semibold
-            bg-accent-dark-purple text-accent-orange
+            bg-accent-orange text-accent-dark-purple
           "
         >
           MENU
@@ -61,4 +61,4 @@ function MenuSidebar() {
   );
 }
 
-export default MenuSidebar;
+export default DesktopOthersSidePanel;

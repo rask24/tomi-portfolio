@@ -3,9 +3,9 @@
 import { useState } from 'react';
 import Image from 'next/image';
 import useHeader from '@/hooks/useHeader';
-import MenuGrid from './MenuGrid';
+import MobileHeaderMenu from './MobileHeaderMenu';
 
-function Header() {
+function MobileHomeHeader() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const { isMobile } = useHeader();
 
@@ -41,9 +41,9 @@ function Header() {
           )}
         </div>
       </header>
-      {isMenuOpen && <MenuGrid onClose={() => setIsMenuOpen(false)} />}
+      {isMenuOpen && <MobileHeaderMenu onClose={() => setIsMenuOpen(false)} />}
     </>
   );
 }
 
-export default Header;
+export default MobileHomeHeader;

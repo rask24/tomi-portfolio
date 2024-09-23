@@ -2,7 +2,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import menuConfig from '@/config/menuConfig';
 
-function MenuGridSidePanel() {
+function DesktopHomeSidePanel() {
   return (
     <div className="fixed top-0 right-0 w-80 h-screen bg-base-black z-40 overflow-auto">
       <div className="relative h-full">
@@ -49,4 +49,4 @@ function MenuGridSidePanel() {
   );
 }
 
-export default MenuGridSidePanel;
+export default DesktopHomeSidePanel;

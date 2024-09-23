@@ -57,7 +57,7 @@ function PortfolioList() {
 
   return (
     <>
-      <div>
+      <div className="flex flex-col items-center">
         {portfolioItems.map((item) => {
           const onSelect = () => handleItemSelect(item);
           const onKeyDown = (e: React.KeyboardEvent<HTMLButtonElement>) => handleKeyDown(e, item);
