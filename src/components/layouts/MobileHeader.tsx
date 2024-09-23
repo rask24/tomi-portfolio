@@ -5,7 +5,7 @@ import Image from 'next/image';
 import useHeader from '@/hooks/useHeader';
 import MenuGrid from './MenuGrid';
 
-function Header() {
+function MobileHeader() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const { isMobile } = useHeader();
 
@@ -46,4 +46,4 @@ function Header() {
   );
 }
 
-export default Header;
+export default MobileHeader;

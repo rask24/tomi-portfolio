@@ -2,7 +2,7 @@
 
 import { usePathname } from 'next/navigation';
 import useHeader from '@/hooks/useHeader';
-import Header from '@/components/layouts/Header';
+import MobileHeader from '@/components/layouts/MobileHeader';
 import MenuGridSidePanel from '@/components/layouts/MenuGridSidePanel';
 import MenuSidebar from '@/components/layouts/MenuSidebar';
 
@@ -16,7 +16,7 @@ export default function ClientLayout({ children }: ClientLayoutProps) {
 
   return (
     <body>
-      {isMobile && <Header />}
+      {isMobile && <MobileHeader />}
       <main className={isMobile ? 'mt-16' : 'mr-80'}>{children}</main>
       {!isMobile && (pathname === '/' ? <MenuGridSidePanel /> : <MenuSidebar />)}
     </body>
